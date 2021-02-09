@@ -12,4 +12,4 @@ script:
     - export M2_HOME=$PWD/apache-maven-3.6.3;
     - export PATH=$M2_HOME/bin:$PATH;
     - mvn -version;
-    - mvn clean install
+    - mvn install
