@@ -3,8 +3,7 @@ jdk:
   - openjdk8
 dist: xenial
 arch:
-  - amd64
   - ppc64le
 
 script:
-    - mvn install
+    - mvn install -DallTests
