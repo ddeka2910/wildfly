@@ -7,4 +7,9 @@ arch:
 
 script:
     - mvn -v
+    - wget https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip || travis_terminate 1;
+    - unzip -qq apache-maven-3.6.3-bin.zip || travis_terminate 1;
+    - export M2_HOME=$PWD/apache-maven-3.6.3;
+    - export PATH=$M2_HOME/bin:$PATH;
+    - mvn -version;   
     - mvn install -DallTests
